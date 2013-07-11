@@ -1,0 +1,98 @@
+--- 
+layout: post
+title: "Manage IIS from the browser"
+author: "Jonas Hovgaard"
+comments: true
+permalink: /manage-iis-from-browser/
+date: 2013/02/18
+description: "In this post I describe how you can use Servant for IIS to manage your IIS from any web browser."
+---
+
+<a href="http://www.servant.io" target="_blank">
+	<img src="/postfiles/servant-banner.png" alt="Servant for IIS" class="banner" />
+</a>
+
+<p>I'm very proud to introduce you to my own very first product: <a href="http://servant.io" target="_blank">Servant for IIS</a>. <br /><br />
+	I daily administrate around 10 webservers. Each of these servers is forcing me to remote connect to the server or setup remote 
+	administration and install and configure both the client and server software. With different workstations I always end up hassling
+	with VPN settings, client software etc. Personally I've never been a fan of "inetmgr", so I decided to stop whining and start contributing 
+	to my favorite webserver.</p>
+
+<p>Servant for IIS is a completely hassle-free way to administrate your IIS directly from your web browser.</p>
+
+<p>I'll start by showing you how to install it and then demonstrate its basic features.</p>
+
+<h2>Installation</h2>
+<ol>
+	<li>Go to <a href="http://www.servant.io" target="_blank">www.servant.io</a> and click the big green button to download the zip file.</li>
+	<li>Login and copy the zip file to the server you want to install on.</li>
+	<li>Extract all files from the zip to a desired folder. I'll go for <strong>C:\servant-1.0.1</strong>.</li>
+	<li>Jump into the installation folder and double click the file <strong>Install Servant Service.bat</strong>. Servant will now install it self as a Windows Service called 
+		<em>Servant for IIS</em>. If you want to uninstall it again, simply run the file <strong>Uninstall Servant Service.bat</strong>. If this gives you any problems, try 
+		running "Servant.Server.exe install" from a command prompt as Administrator.</li>
+	<li>A new browser window will automatically open. This is the installation wizard:<br>
+	<div style="margin: 15px 0; font-size: 10pt;">
+		<a href="/postfiles/servant_install_wizard.png" target="_blank"><img src="/postfiles/servant_install_wizard.png" class="intextimage"></a>
+		<strong>URL of Servant</strong> is the URL you want Servant to be accessible from.
+		<br />
+		<strong>Username</strong> and <strong>password</strong> is the credentials you want to use to authenticate yourself. 
+		<div class="clear"></div>
+	</li>
+	<li>When all fields is entered click the green button. This will save your configuration.</li>
+	<li>The next screen leaves you only one button to click on: <em>Click here to login now</em></li>
+	<li>Servant will now ask for your credentials and log you in - That's it! You can now log out of your server and access Servant from your desktop machine.</li>
+</ol>
+
+<h2>The home screen</h2>
+<p>
+	<a href="/postfiles/servant_home_screen.png" target="_blank"><img src="/postfiles/servant_home_screen.png" class="intextimage"></a>
+	The home screen of Servant gives you a quick overview of the latest unhandled exceptions thrown by any of your sites. Clicking on the exception will redirect you to the 
+	details/stack trace of the selected exception (we will get to exceptions later).
+	<br /><br />
+	Notice that all of your sites is available by clicking the Sites item in the menu to the left.
+	<br /><br />
+	If you're experiencing bugs, want new features or anything else there's a feedback button to the right of the screen.
+</p>
+<div class="clear"></div>
+
+
+<h2>Create new site</h2>
+<p>
+	<a href="/postfiles/servant_create_new_site.png"><img src="/postfiles/servant_create_new_site.png" class="intextimage"></a>
+	By clicking on <strong>Create new</strong> under the menu's site section you'll be able to create a new website. Simply fill out all of the fields like when you create sites
+	in the IIS Manager, and Servant will create the site and redirect you to the site's settings page. Simple as that!
+</p>
+<div class="clear"></div>
+
+<h2>Site settings</h2>
+<p>
+	<a href="/postfiles/servant_site_settings.png"><img src="/postfiles/servant_site_settings.png" class="intextimage"></a>
+	The site settings page give you direct access to the basic settings of a website.
+	<br /><br />
+	You can change name, bindings, site path and application pool. Also you can <strong>start/stop a site</strong>, <strong>restart the site</strong> or <strong>recycle 
+	the application pool</strong> it's running on. Of course you can also <strong>delete the site</strong>.
+	<br /><br />
+	From this screen you can go to the errors screen from the top menu.
+</p>
+<div class="clear"></div>
+
+<h2>Site settings</h2>
+<p>
+	<a href="/postfiles/servant_site_errors.png" target="_blank"><img src="/postfiles/servant_site_errors.png" class="intextimage"></a>
+	The site errors screen is powerful tool that quickly shows you all unhandled exceptions thrown by the selected website.
+	<br /><br />
+	The exception column is the message of the exception.<br />
+	The timestamp column is the time since the exception thrown. By hovering over the text you'll get the UTC timestamp.
+	<br />
+	By clicking on the exception message you'll be redirected to the error details screen.
+</p>
+<div class="clear"></div>
+<br />
+<p>That's all for now. Servant is not released as open source. There's a commercial edition on its way including awesome features like error monitoring, git publish and more.</p>
+<p>I hope you like my product! I'm extremely excited about the release and would love to hear your feedback.</p>
+<p><strong>So please drop a comment, are you going to try out Servant on your servers?</strong></p>
+<p>
+	Have a great day!
+	<br />
+	Jonas
+</p>

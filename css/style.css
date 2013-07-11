@@ -1,0 +1,161 @@
+body {
+	background-color: #35303b;
+	font-family: 'Segoe UI';
+	font-size: 10.5pt;
+	line-height: 19pt;
+	color: #555555;
+	margin: 28px 28px 28px 0;
+}
+
+a, a:visited, a:active {
+	color: #00bcf2;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;	
+}
+.clear { clear: both;}
+
+blockquote {
+	font-style: italic;
+}
+
+pre { white-space: pre; }
+code { overflow-x: scroll; }
+
+/* PORTFOLIO
+---------------------- */
+#portfolio {
+	background-color: #fff;
+	width: 200px;
+	text-align: center;
+	padding: 30px 30px;
+	float: left;
+}
+#portfolio .logo {
+	display: block;
+	font-family: 'Calibri';
+	font-size: 21px;
+	font-weight: bold;
+	color: #555555;
+	text-decoration: none;
+	margin-bottom: 30px;
+}
+#portfolio .picture {
+	border-radius: 10px;
+	margin: 30px 0 0;	
+}
+#portfolio p {
+	margin: 0 0 30px;
+}
+
+
+/* PAGE CONTENT
+---------------------- */
+#container .post {
+	min-width: 475px;
+	max-width: 835px;
+	padding: 30px;
+	margin: 0 0 0px 290px;
+	background-color: #fff;
+}
+
+#container .post.spacer {
+	margin-bottom: 150px;
+}
+
+#container .post h1,#container .post h2 {
+	font-family: "wf_SegoeUILight","wf_SegoeUI","Segoe UI Light","Segoe WP Light","Segoe UI","Segoe","Segoe WP","Tahoma","Verdana","Arial","sans-serif";
+	line-height: 28pt;
+}
+#container .post h1 a { color: #555555;}
+#container .post h1 {
+	font-size: 26pt;
+	font-weight: 100;
+	text-align: center;
+}
+#container .post h2 { font-size: 18pt; margin: 50px 0 20px;}
+#container .post .published {
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 0;
+	display: block;
+	text-align: center;
+	color: #aeaeae;
+}
+#container .post .banner {
+	display: block;
+	margin: 30px auto;
+	max-width: 100%;
+	max-height: 100%;
+
+}
+#container .post .intextimage {
+	max-width: 300px;
+	float: left;
+	margin: 8px 10px 0 0;
+}
+
+#container .post .maxwidth {
+	max-width: 475px;
+}
+
+
+#container .next {
+	float: right;
+}
+
+#container .paginator {
+	margin: 30px 0 30px 290px;
+	min-width: 475px;
+	max-width: 895px;
+}
+
+#container ul.series {
+	list-style: none;
+	margin: 0 0 30px 0;
+	padding: 0;
+	background-color: #97d28b;
+	float: left;
+	width: 100%;
+	
+}
+#container ul.series li {
+	float: left;
+}
+
+#container ul.series li a {
+	display: inline-block;
+	font-weight: bold;
+	color: white;
+	padding: 3px 90px 3px 20px;
+}
+#container ul.series li a.active, #container ul.series li a:hover {
+	background-color: #35303b;
+	text-decoration: none;
+}
+
+
+/*  Mobile stuff
+----------------------- */
+@media all and (max-width: 845px) {
+	body {
+		margin: 28px;
+	}
+	#portfolio {
+		float: none;
+		margin-bottom: 30px;
+		width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+
+	#container .post
+	{
+		margin-left: 0px;
+	}
+
+	#container .paginator {
+	margin-left: 0px;
+}
+}

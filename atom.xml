@@ -1,0 +1,30 @@
+---
+layout: nil
+site_url: http://www.jhovgaard.com
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>jhovgaard.com</title>
+  <link href="{{page.site_url}}"/>
+  <link type="application/atom+xml" rel="self" href="{{page.site_url}}/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{page.site_url}}</id>
+  <author>
+    <name>Jonas Hovgaard</name>
+    <email>j@jhovgaard.dk</email>
+  </author>
+
+  {% for post in site.posts %}
+  <entry>
+    <id>{{page.site_url}}{{ post.url }}</id>
+    <link type="text/html" rel="alternate" href="{{page.site_url}}{{ post.url }}"/>
+    <title>{{ post.title | xml_escape }}</title>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>Jonas Hovgaard</name>
+      <uri>{{page.site_url}}</uri>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>
