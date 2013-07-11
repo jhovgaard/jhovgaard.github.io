@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css" rel="stylesheet" />
+	<link href="/css/style.css" rel="stylesheet" />
+	<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/github.min.css" rel="stylesheet" />
+	<title>Jonas Hovgaard - Professional C# developer</title>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+	<link type="application/atom+xml" rel="alternate" href="/atom.xml"/>
+	<meta name="description" content="Personal blog for professional web developer Jonas Hovgaard (jhovgaard)" />
+</head>
+	<body>
+		<!-- Portfolio -->
+		<div id="portfolio">
+			<a href="/" class="logo">
+				@jhovgaard from gh-pages
+				<br />
+				<img src="/img/jhovgaard.png" alt="jhovgaard" class="picture" />
+			</a>
+			<p>
+				I'm a C# developer located in Copenhagen, Denmark. 
+				I love simple solutions solving complex stuff.
+			</p>
+			<a href="http://twitter.com/jhovgaard" target="_blank">
+				<img src="/img/twitter.png" alt="jhovgaard on Twitter" />
+			</a>
+			<a href="https://plus.google.com/117486218076846928759" target="_blank" rel="author">
+				<img src="/img/gplus.png" alt="jhovgaard on Google Plus" style="margin-left:15px; position: relative; top:1px;" />
+			</a>
+		</div>
+
+		<!-- Main content -->
+		<div id="container">
+			
+
+	
+	<div class="post spacer">
+	
+		<h1><a href="/servant-1-1-released/">Servant 1.1 released</a></h1>
+		<abbr class="published" title=" 5 juli, 2013">PUBLISHED  5 juli, 2013</abbr>
+		<p><a href="http://www.servant.io" target="_blank">
+	<img src="/postfiles/servant-1.1-banner.png" alt="Servant for IIS" class="banner" />
+</a></p>
+<p>At last, Servant 1.1 is now released and publicly available. The release of the first version was a very overwhelming experience. I received a lot of wonderful feedback from people who loved what Servant brought to the IIS. At the same time I was also taught that developers simply don't accept bugs and glitches in production software. Servant 1.1 is all about that - bugfixes and performance improvements (boring stuff, I agree). </p>
+<p>I'll walk through the most exciting changes, starting with new features.</p>
+<h2>HTTPS support</h2>
+<p>I'm introducing HTTPS support for the Servant engine itself. That means that you're now able to change the URL of Servant to for example <code>https://servant.example.com</code>. When Servant detects HTTPS in the entered URL a self-signed certificate will be created and installed on the server. You will see the nasty browser warning telling you that the site is not safe. That's expected. To avoid it you would need to buy a SSL certificate for Servant. I don't expect requests for this feature, but if you need it, please add/vote the idea at <a href="http://servant.uservoice.com/" target="_blank">the UserVoice site</a>.</p>
+<h2>Automatic error reporting and usage statistics</h2>
+<p>I had a hard time solving users' problems. To overcome this, exceptions in Servant is now being sent to Raygun.io. Also all traffic is tracked using Google Analytics. Everything is totally anonymous. </p>
+<p>For Google Analytics Servant uses <a href="https://support.google.com/analytics/answer/2763052?hl=en" target="_blank">IP Anonymization</a> to hide your servers IP and <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/domains" target="_blank">disable cookieDomain</a> to hide your hostname.</p>
+<p>For error reporting Servant isn't sending any personal data either. Reports are limited to machine informations (hardware, OS info), URL (without hostname) and the stacktrace of the  thrown exception.</p>
+<p>If you don't like any data leaving your server you can disable it all under settings or during the installation.</p>
+<h2>Support for virtual applications</h2>
+<p><a href="/postfiles/servant-1.1-virtualapplications.png" target="_blank">
+	<img src="/postfiles/servant-1.1-virtualapplications.png" class="intextimage" />
+</a>
+This is step 1/2 of the most requested feature for Servant: support for virtual applications under sites. A lot of people found Servant completely useless because their IIS setup was completely depending on virtual applications and directories. Applications are now supported. Directories is coming, I just need to figure out a smart way to visualize it.</p>
+<div class="clear"></div>
+<h2>Intelligent exception parsing</h2>
+<p><a href="/postfiles/servant-1.1-intelligentexceptionparsning.png" target="_blank">
+	<img src="/postfiles/servant-1.1-intelligentexceptionparsning.png" class="intextimage" />
+</a>
+Servant now parses exception more intelligently. Instead of showing a huge list of <code>HttpException</code> for example, exceptions are now being parsed and the top exception message is shown. The message is gathered from the stacktrace's first line, exactly how IIS shows errors.</p>
+<div class="clear"></div>
+<h2>IIS Default Web Site were missing</h2>
+<p>Yes, the biggest bug on Servant 1.0 has been fixed. A lot of users experienced that the site created by IIS on installation simply wasn't available in Servant. It turned out that this site contained special protocol bindings such as net.tcp. Servant only supports HTTP/HTTPS. I've fixed it by ignoring all other protocols meaning the default web site is now available from Servant too. How could this get through the beta I ask myself...</p>
+<p>So here you go, a stable release of Servant! The release includes a lot of additional bugfixes which isn't mentioned in this post. Of course there will still be more bugs and glitches but hopefully few enough to overcome.</p>
+<h2>What about Servant 1.2, any new features?</h2>
+<p>What a great question! Servant 1.1 was in no doubt hard work, simply because it was boring (isn't bugfixing always?). Developing Servant 1.2 is super fun, because it's all about new features, great features actually. </p>
+<p>The feature 1.2 will be remembered for is... Ready? <b>Full blown totally automated full stack deployment!</b> Yes! Servant will download your source from a Git repository, it will build your project, deploy it to not one but all of your Servant-enabled servers. It will even warm up each server using proxy (to support loadbalancing setups) and at last it rolls back the deploy if a server returns anything but 200 OK.</p>
+<p>So that's it for now. Go <a href="http://www.servant.io" target="_blank">download Servant 1.1</a> and test it out yourself. </p>
+<p>What do you think about this release? Are you excited about the upcoming deploy feature?</p>
+<p>Have a great day!</p>
+<p>Jonas</p>
+
+	</div>
+
+
+	
+	<div class="post spacer">
+	
+		<h1><a href="/manage-iis-from-browser/">Manage IIS from the browser</a></h1>
+		<abbr class="published" title="18 februar, 2013">PUBLISHED 18 februar, 2013</abbr>
+		<a href="http://www.servant.io" target="_blank">
+	<img src="/postfiles/servant-banner.png" alt="Servant for IIS" class="banner" />
+</a>
+
+<p>I'm very proud to introduce you to my own very first product: <a href="http://servant.io" target="_blank">Servant for IIS</a>. <br /><br />
+	I daily administrate around 10 webservers. Each of these servers is forcing me to remote connect to the server or setup remote 
+	administration and install and configure both the client and server software. With different workstations I always end up hassling
+	with VPN settings, client software etc. Personally I've never been a fan of "inetmgr", so I decided to stop whining and start contributing 
+	to my favorite webserver.</p>
+
+<p>Servant for IIS is a completely hassle-free way to administrate your IIS directly from your web browser.</p>
+
+<p>I'll start by showing you how to install it and then demonstrate its basic features.</p>
+
+<h2>Installation</h2>
+<ol>
+	<li>Go to <a href="http://www.servant.io" target="_blank">www.servant.io</a> and click the big green button to download the zip file.</li>
+	<li>Login and copy the zip file to the server you want to install on.</li>
+	<li>Extract all files from the zip to a desired folder. I'll go for <strong>C:\servant-1.0.1</strong>.</li>
+	<li>Jump into the installation folder and double click the file <strong>Install Servant Service.bat</strong>. Servant will now install it self as a Windows Service called 
+		<em>Servant for IIS</em>. If you want to uninstall it again, simply run the file <strong>Uninstall Servant Service.bat</strong>. If this gives you any problems, try 
+		running "Servant.Server.exe install" from a command prompt as Administrator.</li>
+	<li>A new browser window will automatically open. This is the installation wizard:<br>
+	<div style="margin: 15px 0; font-size: 10pt;">
+		<a href="/postfiles/servant_install_wizard.png" target="_blank"><img src="/postfiles/servant_install_wizard.png" class="intextimage"></a>
+		<strong>URL of Servant</strong> is the URL you want Servant to be accessible from.
+		<br />
+		<strong>Username</strong> and <strong>password</strong> is the credentials you want to use to authenticate yourself. 
+		<div class="clear"></div>
+	</li>
+	<li>When all fields is entered click the green button. This will save your configuration.</li>
+	<li>The next screen leaves you only one button to click on: <em>Click here to login now</em></li>
+	<li>Servant will now ask for your credentials and log you in - That's it! You can now log out of your server and access Servant from your desktop machine.</li>
+</ol>
+
+<h2>The home screen</h2>
+<p>
+	<a href="/postfiles/servant_home_screen.png" target="_blank"><img src="/postfiles/servant_home_screen.png" class="intextimage"></a>
+	The home screen of Servant gives you a quick overview of the latest unhandled exceptions thrown by any of your sites. Clicking on the exception will redirect you to the 
+	details/stack trace of the selected exception (we will get to exceptions later).
+	<br /><br />
+	Notice that all of your sites is available by clicking the Sites item in the menu to the left.
+	<br /><br />
+	If you're experiencing bugs, want new features or anything else there's a feedback button to the right of the screen.
+</p>
+<div class="clear"></div>
+
+
+<h2>Create new site</h2>
+<p>
+	<a href="/postfiles/servant_create_new_site.png"><img src="/postfiles/servant_create_new_site.png" class="intextimage"></a>
+	By clicking on <strong>Create new</strong> under the menu's site section you'll be able to create a new website. Simply fill out all of the fields like when you create sites
+	in the IIS Manager, and Servant will create the site and redirect you to the site's settings page. Simple as that!
+</p>
+<div class="clear"></div>
+
+<h2>Site settings</h2>
+<p>
+	<a href="/postfiles/servant_site_settings.png"><img src="/postfiles/servant_site_settings.png" class="intextimage"></a>
+	The site settings page give you direct access to the basic settings of a website.
+	<br /><br />
+	You can change name, bindings, site path and application pool. Also you can <strong>start/stop a site</strong>, <strong>restart the site</strong> or <strong>recycle 
+	the application pool</strong> it's running on. Of course you can also <strong>delete the site</strong>.
+	<br /><br />
+	From this screen you can go to the errors screen from the top menu.
+</p>
+<div class="clear"></div>
+
+<h2>Site settings</h2>
+<p>
+	<a href="/postfiles/servant_site_errors.png" target="_blank"><img src="/postfiles/servant_site_errors.png" class="intextimage"></a>
+	The site errors screen is powerful tool that quickly shows you all unhandled exceptions thrown by the selected website.
+	<br /><br />
+	The exception column is the message of the exception.<br />
+	The timestamp column is the time since the exception thrown. By hovering over the text you'll get the UTC timestamp.
+	<br />
+	By clicking on the exception message you'll be redirected to the error details screen.
+</p>
+<div class="clear"></div>
+<br />
+<p>That's all for now. Servant is not released as open source. There's a commercial edition on its way including awesome features like error monitoring, git publish and more.</p>
+<p>I hope you like my product! I'm extremely excited about the release and would love to hear your feedback.</p>
+<p><strong>So please drop a comment, are you going to try out Servant on your servers?</strong></p>
+<p>
+	Have a great day!
+	<br />
+	Jonas
+</p>
+	</div>
+
+
+	
+	<div class="post spacer">
+	
+		<h1><a href="/deploying-git-support-iis-server/">Deploying: Add Git support to your IIS server</a></h1>
+		<abbr class="published" title="12 juli, 2012">PUBLISHED 12 juli, 2012</abbr>
+		<h2>Have you heard?</h2>
+<p>Recently <a href="http://www.meetwindowsazure.com/">Microsoft bragged about the new and much more awesome Azure</a>.</p>
+<p>One of the more cool things they announced is the ability to deploy your applications directly from your git repository (using <strong>git push</strong>) and straight to your Azure hosted website. It loads your master branch, compiles everything and upload the whole thing automatically. Pretty sick!</p>
+<p>Now you may think <em>&quot;Cool story bro, but I host my own IIS!&quot;</em> - Well, no problem! <a href="http://weblogs.asp.net/davidfowler/">David Fowler</a> and <a href="http://blog.davidebbo.com/">David Ebbo</a> are the creators of Project Kudu - the engine behind automated deployment via Git on Azure. These guys did an awesome job by not limiting this project to Azure, making us able to use it on IIS. Now time to grok it!</p>
+<h2>Clone the repo</h2>
+<p>Point your browser to <a href="https://github.com/projectkudu/kudu">https://github.com/projectkudu/kudu</a> and <a href="https://help.github.com/articles/fork-a-repo">clone the master</a> down to your disk.</p>
+<h2>Build n' start!</h2>
+<blockquote>
+<p>Below I'll assume that you have IIS 7.x installed on your local machine. If you want to go live with Kudu, simply deploy the <strong>Kudu.Web</strong> project to a site on your production/online IIS as usual.</p>
+</blockquote>
+<p>Now open up the <strong>Kudu.sln</strong> in Visual Studio. Mark the <strong>Kudu.Web</strong> project as active (makes it bold) and hit CTRL+F5.</p>
+<p>If everything went well you should now see the Kudu dashboard, looking like this:</p>
+<p><a href="/postfiles/kudu-dashboard.png" target="_blank"><img src="/postfiles/kudu-dashboard.png" alt="Kudu Dashboard" class="maxwidth" /></a></p>
+<h2>Create your first Git enabled site</h2>
+<p>In your Kudu dashboard:</p>
+<ul>
+<li>Click the &quot;Create application&quot; link in the top menu.</li>
+<li>Enter a preferred name for the IIS site (I.e. &quot;jhovgaardnet&quot;).</li>
+<li>Click the blue &quot;Create application&quot; button.</li>
+</ul>
+<p>Kudu is now creating a brand new IIS site directly on your IIS (!!) and showing you some geeky stuff:</p>
+<p><a href="/postfiles/kudu-created.png" target="_blank"><img src="/postfiles/kudu-created.png" alt="Kudu website created" class="maxwidth" /></a></p>
+<p>It tells the URL to the Git remote we can push apps to, the URL to the site itself and the service URL which actually is the Git remote from before.</p>
+<p>Let's take a quick look in IIS to see what happend:</p>
+<p><a href="/postfiles/kudu-iis.png" target="_blank"><img src="/postfiles/kudu-iis.png" alt="Kudu sites in IIS" class="maxwidth" /></a></p>
+<p>So Kudu is creating 2 sites with a kudu_ prefix. The first is the main site, the one hosting your application. The second is the &quot;git remote site&quot;/service site. Both sites is running on the same application pool.</p>
+<p>If we go to the application URL we see a default screen:</p>
+<p><a href="/postfiles/kudu-iis-default-site.png" target="_blank"><img src="/postfiles/kudu-iis-default-site.png" alt="Kudu IIS default site" class="maxwidth" /></a></p>
+<h2>Let's push it!</h2>
+<p>Alright, let's assume that you want to push a FunnelWeb blog like mine to the newly created site. First clone your fork of FunnelWeb (or whatever application you like) to your disk. Next open up a git shell (if you're using <a href="http://windows.github.com/">Github for Windows</a>, go to the repository, select <strong>tools</strong> then <strong>open a shell here</strong>). We now need to add a new remote, using the Git URL we got from Kudu. In my case I typed this:</p>
+<pre><code>git remote add kudu http://localhost:63185/jhovgaardnet.git
+</code></pre>
+
+<p>Git now knows about the repository located on our local IIS, making us able to do a simple push of our <strong>master</strong> like this:</p>
+<pre><code>git push kudu master
+</code></pre>
+
+<p>Awesome! If you didn't mess it up, this is what you should see (not necessary the dependency installations of course):</p>
+<img src="/postfiles/kudu-deployed.png" class="maxwidth" />
+<p>Now updating the application URL shows my fully deployed blog, just as expected. Yes, it's freaking awesome!</p>
+<h2>Conclusion</h2>
+<p>The next thing for you will be to deploy Kudu on your production IIS, setting up sites as Kudu sites, setting correct bindings, etc.</p>
+<p>I really think Kudu is swell and I hope to see some interesting forks of Kudu that moves it closer to a continuous integration system with <a href="https://github.com/projectkudu/kudu/tree/githubhook">Github hooks</a>, unit testing abilities, etc. TeamCity is cool, but it's expensive and heavy. We need a slick open source .NET alternative and I hope Kudu is the beginning!</p>
+<p>What do you think? Can you see the possibilities? Are you going to use Kudu?</p>
+<p>Thanks for reading guys!</p>
+<p>If you read so far, <a href="http://twitter.com/#!/jhovgaard">why don't you follow me on Twitter? :-)</a></p>
+
+	</div>
+
+
+	
+	<div class="post spacer">
+	
+		<h1><a href="/how-i-stopped-writing-awesome-code/">How I stopped writing awesome code</a></h1>
+		<abbr class="published" title="12 juni, 2012">PUBLISHED 12 juni, 2012</abbr>
+		<h2>The problem</h2>
+<p>If writing awesome code is using all the best practices I can find, writing interfaces, unit tests and using top notch IoC containers to control my repositories and services all over my application's different layers - Then I'm not writing awesome code at all!</p>
+<p>I've been that guy, the one writing the awesome code, but I stopped. I'm not awesome any more. Instead, I'm productive, I'm so damn productive!</p>
+<h2>I don't write unit tests</h2>
+<p><a href="http://www.urbandictionary.com/zoom.php?imageid=46380">ZOMG</a> you may think. You are right, I lose so much safety. I don't know if I break other parts of my code if I change something.</p>
+<p>I've spent so much time writing all of these tests, even before I ever wrote the code to test (that should be a &quot;wtf&quot;), and still my boss complained that functions suddenly didn't worked any more.</p>
+<p>To make my boss (or your customers) happy again I started investigating what I needed to make sure worked. The answer was the result in the browser. In my test scenario I found out that the important things for my boss was to be sure that these functions worked flawless:</p>
+<ul>
+<li>Creating a new profile</li>
+<li>Logging into the new profile</li>
+<li>Receive welcome message on first login (that was a visible div) </li>
+<li>Log out </li>
+<li>Login again </li>
+<li>Delete profile </li>
+<li>Not being able to login after deletion </li>
+<li>And everything else you write unit tests for.</li>
+</ul>
+<p>My boss or your customers don't care about the status of our unit tests. They look at the result in the browser and so should I.</p>
+<p>To overcome this challenge, I downloaded <a href="http://seleniumhq.org/download/">the Selenium IDE for Firefox</a>. Selenium is neat tool that enables you to run a list of commands directly in a browser. It gives you a list of all failed and succeeded tests (yeah, like your current unit tests). The big ass difference here is that these results is based on the end result (the HTML returned), not something techy stuff going on even before the browser.</p>
+<p>I don't wanna teach how to use Selenium (spam me in comments if you want me to), I just want to point out that <strong>my tests tells me what will make my boss sad, and your test tells you what code that breaks</strong>. If you don't agree, please comment - that's the purpose of this post :-)</p>
+<h2>I don't do interfaces or use IOC</h2>
+<p>This started because of the lost connection between my concrete class and the place I ended when I hit F12 in Visual Studio (Go to declaration). This meant that not even Visual Studio understood what class my <strong>IUserService</strong> actually was. How could that be? What is the advantage? In my personal scenario (creating around 20-30 apps every year), I did it to be able to change the concrete class later on. The funny fact is that I never ever did this, except for one time.</p>
+<p>I agree, it's absolutely awesome that I can change the concrete type or lifecycle with ease, but for gods sake, I don't even dare to count the hours I have spent creating these abstractions, making me able to do something <strong>I never freaking do</strong>.</p>
+<p>Oh, I forgot something. I did spent a lot of time writing interfaces (yeah okay, Resharper did it, but was annoying when I created new methods). But also I spent hours trying to understand what Ninject or StructureMap did with my classes. When I finally understood, I handed over the application to the next developer who also was forced to spent time understanding some IOC.</p>
+<p>How hard could it be to initialize every class like this:</p>
+<pre><code>var userService = new UserService();
+</code></pre>
+
+<p>I could even create my classes as static, making them singletons or whatever to each individual class. My co-programmers could understand what was going on immediately, without finding and understanding my <strong>AwesomeIoc.Init()</strong> method.</p>
+<p>Sure, again I lose some functionality and safety but seriously, programming is like Diablo 3 - You don't need armor and life, if you kill in one hit!</p>
+<p><em>For non gamers: I mean you don't need all that functionality, if your productivity gets much higher without it.</em></p>
+<h2>I don't use regular ORMs</h2>
+<p>One day I was struggling with NHibernate, trying to make it send the correct query to my SQL server (not MySQL, just mine). Funny thing was - I knew what it should sent. So one thing was obvious - I didn't used NHibernate to help me write complex SQL queries - I'm no brogrammer, so I know how to write those magic strings!</p>
+<p>So why did I use it? The answer was: to map the data from my database to my &quot;domain&quot; classes (I hate that word, it's POCOs). Also I used it to track all changes to the POCO's properties.</p>
+<p>I started searching Github for better alternatives and I found <a href="https://github.com/markrendle/Simple.Data">Simple.Data</a> and <a href="http://code.google.com/p/dapper-dot-net/">Dapper</a>. This is extremely simple ORMs. Dapper is the most simple, letting me write true SQL directly in C#, and gives me the results as POCOs. Simple.Data is a bit more complex. You don't write SQL directly, but use chained lamba, to instruct how to query.</p>
+<p>Whether I use <a href="https://github.com/markrendle/Simple.Data">Simple.Data</a> or <a href="http://code.google.com/p/dapper-dot-net/">Dapper</a> I no more struggle with things I already know. I'm not afraid of relations and I don't have to open a Profiler to find out what queries my ORM sends to the SQL server.</p>
+<p>Again, with thoughts back to Diablo 3, I gained more damage, but lost some armor. However, my accumulated damage (meaning productivity) is now so high, I just kill it all instantly!</p>
+<h2>I do everything to make things more simple</h2>
+<p>I found out that simple code makes me smile. It makes me able to create new functions extremely fast, without hitting &quot;walls&quot;. So whenever I write code, I always try to keep it simple. Not <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a>, but simple! If some code gets more complicated when <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRYing</a> it, I don't care about copy pasting (however, most of the time I just rewrite the DRY code, making it simpler).</p>
+<p>I don't use Microsoft's big mother MVC framework, but instead <a href="http://jhovgaard.net/from-aspnet-mvc-to-nancy-part-1">stick with minimalistic and simple frameworks like NancyFX</a>. Whatever I do, I just try to do it more simple.</p>
+<h2>The result is the conclusion</h2>
+<p>My personal result of doing all of this is productivity and better products. I can't tell if I did it all wrong, and that's why I'm writing better code now, but I truly believe that I'm not alone. In fact I think that most of us regular web developers, tend to do the same &quot;mistakes&quot; as I did.</p>
+<p>Please, let me hear your thoughts. Do you think I'm just a noob who doesn't understand shit? Is it all too &quot;brogrammerish&quot;, or do you actually agree with me? Whatever the reason, thanks for your comment!</p>
+<p>If you read so far, <a href="http://twitter.com/#!/jhovgaard">why don't you follow me on Twitter? :-)</a></p>
+<h2>Update 13th June 2012</h2>
+<p>Because of the big attention this post got, I wanna point out a few things:</p>
+<p>I agree, the post was meant to provoke. However the post wasn't written to flame unit tests. They are awesome and extremely important on large projects with a bigger lifespan. However, I believe they aren't always necessary on smaller projects. The intention with this post is to make us all remember to be critical to our tools and remember that &quot;best practices&quot; can't be best in all situations.</p>
+<p>The post is targeted to the &quot;average&quot; developer (those we often forget), who's responsible for developing the smaller applications, not necessary visible to the public, but extremely important for the right companies.</p>
+<p>I do use TDD, I do use interfaces and IOCs, I do use complex ORMs and big frameworks, but only, and only when I really need it (I kinda try to reduce the noise in my apps). Like said in the comments: It's a question about choosing the right tools for the job.</p>
+<p>Oh btw, to avoid further flaming - Yes, you're right, I'm a big noob who writes spaghetti code that isn't maintainable at all.</sarcasm></p>
+<h2>Update 12th July 2012</h2>
+<p>A few people have responded via blog post. Check em' out here:</p>
+<ul>
+<li><a href="http://endlessobsession.com/blog/should-you-write-awesome-code">Should you write awesome code?</a></li>
+<li><a href="http://www.codalicio.us/2012/06/why-would-i-write-unit-tests-when-i-get.html">Why Would I Write Unit Tests When I Get Paid by the Hour?</a></li>
+<li><a href="http://engineersjourney.wordpress.com/2012/06/13/food-for-thought/">Food for thought</a></li>
+</ul>
+<p>Thanks for joining the discussion guys :-)</p>
+
+	</div>
+
+
+	
+	<div class="post">
+	
+		<h1><a href="/visual-studio-2012-web-project-is-incompatible/">Visual Studio 2012: Web Project is incompatible</a></h1>
+		<abbr class="published" title="12 juni, 2012">PUBLISHED 12 juni, 2012</abbr>
+		<h2>The problem</h2>
+<p>So you just installed Visual Studio 2012 and hit your .sln file for the very first time. Visual Studio boots up and you feel excited. Then bang, you see something like this:</p>
+<p><a href="/postfiles/vs2012bug.png" target="_blank"><img src="/postfiles/vs2012bug.png" alt="VS2012 MVC bug" class="maxwidth" /></a></p>
+<p>I've also seen errors like these:</p>
+<ul>
+<li>The application which this project type is based on was not found. </li>
+<li>This project is incompatible with this version of visual studio 2012.</li>
+<li>This project is incompatible with the current edition of Visual Studio.</li>
+<li>Incompatible. The project will load in the background.</li>
+<li>Load failed. The project requires user input.</li>
+</ul>
+<p>The reason is that Visual Studio 2012 doesn't support ASP.NET MVC 1 or 2.</p>
+<h2>The solution</h2>
+<p>Download and run the <a href="http://aspnet.codeplex.com/releases/view/59008">ASP.NET MVC 3 Application Upgrader</a> on your solution. After doing that you should be able to open your solution.</p>
+<p>If your project isn't using MVC or you can't get the upgrader to run, try <a href="http://weblogs.asp.net/leftslipper/archive/2009/01/20/opening-an-asp-net-mvc-project-without-having-asp-net-mvc-installed-the-project-type-is-not-supported-by-this-installation.aspx">following Eilon's post</a>.</p>
+<p><strong>Thanks to Eilon for pointing out the correct solution in comments.</strong></p>
+
+	</div>
+
+
+
+<div class="paginator">
+
+
+
+
+  <a class="next" href="/page/2/"><img src="/img/next.png" alt="Next"/></a>
+
+</div>
+<div class="clear"></div>
+		</div>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/highlight.min.js"></script>
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-9004302-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
+</html>
