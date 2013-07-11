@@ -1,3 +1,2 @@
 paginate: 5
-pretzel: 
-    engine: liquid
+paginate_path: "/page:num"
