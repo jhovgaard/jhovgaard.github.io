@@ -1,8 +1,9 @@
 --- 
 layout: post
-title: How I stopped writing awesome code
-author: Jonas Hovgaard
-description: I don't write unit tests, interfaces, use IOC or heavy ORMs. Yet I'm not a brogrammer.
+title: "How I stopped writing awesome code"
+author: "Jonas Hovgaard"
+comments: true
+description: "I don't write unit tests, interfaces, use IOC or heavy ORMs. Yet I'm not a brogrammer."
 ---
 ## The problem
 

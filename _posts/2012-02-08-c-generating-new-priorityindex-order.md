@@ -3,7 +3,6 @@ layout: post
 title: "C# Generating new priority/index order"
 author: "Jonas Hovgaard"
 comments: true
-permalink: /c-generating-new-priorityindex-order/
 description: "I just came by one of those scenarios where you need to generate new priority indexes because the user wants to reorganize some list."
 ---
 Sup!

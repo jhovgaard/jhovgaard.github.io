@@ -3,7 +3,6 @@ layout: post
 title: "From ASP.NET MVC to Nancy - Part 2"
 author: "Jonas Hovgaard"
 comments: true
-permalink: /from-aspnet-mvc-to-nancy-part-2/
 description: "This second part digs into the use of IntelliSense combined with Nancy by doing simple modelbinding on GET/POST actions."
 tags:
 - from-aspnet-mvc-to-nancy
@@ -13,8 +12,6 @@ tags:
 > This is a series of posts. If you just dropped into this article, you really should [start by reading part 1][1].
 
 Alright. Note to my self: Never say "tomorrow I will..." in a blog post unless the stuff to do already is done :P Sorry for the delay but here we go again.
-
-<div class="clear"></div>
 
 ## Nancy Modelbinding - moving data from our module to the view
 

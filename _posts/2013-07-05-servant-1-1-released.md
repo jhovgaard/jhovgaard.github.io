@@ -3,7 +3,6 @@ layout: post
 title: "Servant 1.1 released"
 author: "Jonas Hovgaard"
 comments: true
-permalink: /servant-1-1-released/
 description: "Servant 1.1 includes a lot of fixes and new features. I'll go through them in this post."
 ---
 
@@ -33,7 +32,7 @@ If you don't like any data leaving your server you can disable it all under sett
 </a>
 This is step 1/2 of the most requested feature for Servant: support for virtual applications under sites. A lot of people found Servant completely useless because their IIS setup was completely depending on virtual applications and directories. Applications are now supported. Directories is coming, I just need to figure out a smart way to visualize it.
 
-<div class="clear"></div>
+<div class="clear"> </div>
 
 ## Intelligent exception parsing
 <a href="/postfiles/servant-1.1-intelligentexceptionparsning.png" target="_blank">
@@ -41,7 +40,7 @@ This is step 1/2 of the most requested feature for Servant: support for virtual 
 </a>
 Servant now parses exception more intelligently. Instead of showing a huge list of `HttpException` for example, exceptions are now being parsed and the top exception message is shown. The message is gathered from the stacktrace's first line, exactly how IIS shows errors.
 
-<div class="clear"></div>
+<div class="clear"> </div>
 
 ## IIS Default Web Site were missing
 Yes, the biggest bug on Servant 1.0 has been fixed. A lot of users experienced that the site created by IIS on installation simply wasn't available in Servant. It turned out that this site contained special protocol bindings such as net.tcp. Servant only supports HTTP/HTTPS. I've fixed it by ignoring all other protocols meaning the default web site is now available from Servant too. How could this get through the beta I ask myself...

@@ -3,7 +3,6 @@ layout: post
 title: "Deploying: Add Git support to your IIS server"
 author: "Jonas Hovgaard"
 comments: true
-permalink: /deploying-git-support-iis-server/
 description: "Using Kudu you can enable .NET deploying via Git on your local IIS."
 ---
 ## Have you heard?

@@ -8,9 +8,9 @@ description: "This post is the first in a series of post on getting started with
 tags:
 - from-aspnet-mvc-to-nancy
 ---
-{{site.related_posts}}
 
-<a href="/postfiles/nancylogo-transparent.png" target="_blank"><img src="/postfiles/nancylogo-transparent.png" class="intextimage" /></a>If you have ever been in the world of Ruby you would know about this little framework called Sinatra. In it's core concept it's a MVC framework, just extremely simple and fast.
+<a href="/postfiles/nancylogo-transparent.png" target="_blank"><img src="/postfiles/nancylogo-transparent.png" class="intextimage" /></a>
+If you have ever been in the world of Ruby you would know about this little framework called Sinatra. In it's core concept it's a MVC framework, just extremely simple and fast.
 
 Nancy is a Micro .NET framework inspired by Sinatra. If you ever felt that ASP.NET MVC is too heavy, too clumsy and stands in your way, Nancy is definitely made for you.
 

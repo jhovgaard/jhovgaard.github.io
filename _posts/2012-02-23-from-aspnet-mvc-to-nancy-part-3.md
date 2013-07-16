@@ -3,7 +3,6 @@ layout: post
 title: "From ASP.NET MVC to Nancy - Part 3"
 author: "Jonas Hovgaard"
 comments: true
-permalink: /from-aspnet-mvc-to-nancy-part-3/
 description: "In this third part we take a look at dependency injection in Nancy using the built-in IoC container TinyIoC."
 tags:
 - from-aspnet-mvc-to-nancy
