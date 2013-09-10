@@ -1,8 +1,9 @@
 body {
 	background-color: #35303b;
-	font-family: 'Segoe UI';
-	font-size: 10.5pt;
-	line-height: 19pt;
+	font-family: "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	font-weight: 400;	
+	line-height: 1.4;
 	color: #555555;
 	margin: 28px 28px 28px 0;
 }
@@ -34,7 +35,6 @@ code { overflow-x: scroll; }
 }
 #portfolio .logo {
 	display: block;
-	font-family: 'Calibri';
 	font-size: 21px;
 	font-weight: bold;
 	color: #555555;
@@ -52,9 +52,11 @@ code { overflow-x: scroll; }
 
 /* PAGE CONTENT
 ---------------------- */
+#container {
+	max-width: 1400px;
+}
+
 #container .post {
-	min-width: 475px;
-	max-width: 835px;
 	padding: 30px;
 	margin: 0 0 0px 290px;
 	background-color: #fff;
@@ -75,13 +77,16 @@ code { overflow-x: scroll; }
 	text-align: center;
 }
 #container .post h2 { font-size: 18pt; margin: 50px 0 20px;}
-#container .post .published {
+#container .post .commentcount, #container .post .published {
 	text-decoration: none;
 	text-transform: uppercase;
 	border: 0;
-	display: block;
+	display: inline;
 	text-align: center;
-	color: #aeaeae;
+	color: #aeaeae;	
+}
+#container .post .commentcount a {
+	color: #aeaeae;	
 }
 #container .post .banner {
 	display: block;
@@ -107,8 +112,6 @@ code { overflow-x: scroll; }
 
 #container .paginator {
 	margin: 30px 0 30px 290px;
-	min-width: 475px;
-	max-width: 895px;
 }
 
 #container ul.series {
@@ -138,14 +141,14 @@ code { overflow-x: scroll; }
 
 /*  Mobile stuff
 ----------------------- */
-@media all and (max-width: 845px) {
+@media all and (max-width: 800px) {
 	body {
-		margin: 28px;
+		margin: 15px;
 	}
 	#portfolio {
 		float: none;
 		margin-bottom: 30px;
-		width: 300px;
+		width: auto;
 		margin-left: auto;
 		margin-right: auto;
 	}	
@@ -153,6 +156,17 @@ code { overflow-x: scroll; }
 	#container .post
 	{
 		margin-left: 0px;
+	}
+
+	#container .post .maxwidth {
+		width: 100%;
+	}
+
+	#container .post .intextimage {
+		float: none;
+		display: block;
+		margin: 10px auto !important;
+		max-width: 100%;
 	}
 
 	#container .paginator {

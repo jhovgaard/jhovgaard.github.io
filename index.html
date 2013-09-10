@@ -12,7 +12,9 @@ description: Personal blog for professional web developer Jonas Hovgaard (jhovga
 	<div class="post spacer">
 	{% endif %}
 		<h1><a href="{{post.url}}">{{post.title}}</a></h1>
-		<abbr class="published" title="{{ post.date | date: "%e %B, %Y"  }}">PUBLISHED {{ post.date | date: "%e %B, %Y"  }}</abbr>
+		<div style="text-align: center;">
+		<abbr class="published" title="{{ post.date | date: "%e %B, %Y"  }}">PUBLISHED {{ post.date | date: "%e %B, %Y"  }}</abbr> <span class="commentcount">(<a href="http://www.jhovgaard.com{{post.url}}#disqus_thread"></a>)</span>
+		</div>
 		{{ post.content }}
 	</div>
 {% endfor %}

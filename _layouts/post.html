@@ -20,7 +20,12 @@ layout: layout
 	{% endif %}
 
 	<h1><a href="{{page.url}}" class="entry-title">{{page.title}}</a></h1>
-	<abbr class="published updated" title="{{ page.date | date: "%e %B, %Y"  }}">PUBLISHED {{ page.date | date: "%e %B, %Y"  }}</abbr>
+
+	<div style="text-align: center;">
+		<abbr class="published" title="{{ page.date | date: "%e %B, %Y"  }}">PUBLISHED {{ page.date | date: "%e %B, %Y"  }}</abbr>
+		<span class="commentcount">(<a href="http://www.jhovgaard.com{{page.url}}#disqus_thread"></a>)</span>
+	</div>
+
 	{{ content }}
 	
 	{% if page.comments %}
