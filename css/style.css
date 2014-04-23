@@ -102,7 +102,7 @@ code { overflow-x: scroll; }
 }
 
 #container .post .maxwidth {
-	max-width: 475px;
+	max-width: 100%;
 }
 
 
