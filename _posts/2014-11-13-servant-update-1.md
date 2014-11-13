@@ -44,7 +44,7 @@ We have endless numbers of features that we want to introduce, but right now thi
 
 <a href="https://www.servant.io" target="_blank">Servant.io</a> is currently in public preview which is completely free for everyone. When we feel like the product is worth paying for, we will introduce a price model. 
 
-We expect prices per server to be around $60/month, but we haven't really thought much about that yet. I promise prices will be fair. There will be a significant discount for students + **open source projects will always be completely free!**
+I promise prices will be fair and will match the size of your organization. Also we will have a discount for students + **completely free for open source organizations!**
 
 
 <br/>

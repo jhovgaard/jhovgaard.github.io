@@ -138,6 +138,18 @@ code { overflow-x: scroll; }
 	text-decoration: none;
 }
 
+#servant-ad {
+  background-color: #eaedee;
+  padding: 10px;
+  margin: 25px 0;
+  text-align: center;
+  font-weight: bold;
+  font-style: normal;
+}
+
+#servant-ad a {
+  color: #f48564
+}
 
 /*  Mobile stuff
 ----------------------- */
