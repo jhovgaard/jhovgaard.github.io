@@ -19,5 +19,5 @@ By deploying to a new folder we also remove the seconds of downtime you normally
 
 We will extend this deployment feature with history, auto warm-up and error detection with automatic roll-back (no ETA yet).
 
-**What do you think? Cool and useful or a complete waste of time? Leave a comment!**
+**What do you think? Cool and useful or a complete waste of time? [Leave a comment!]({{ page.url }}#comments)**
 
