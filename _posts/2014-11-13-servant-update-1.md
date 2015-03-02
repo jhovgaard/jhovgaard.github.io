@@ -4,6 +4,7 @@ title: "Servant.io available in public preview"
 author: "Jonas Hovgaard"
 comments: true
 description: "Servant.io - a hosted manager for your web server"
+redirect_to: http://blog.servant.io/servant-update-1/
 ---
 
 <a href="https://www.servant.io" target="_blank">

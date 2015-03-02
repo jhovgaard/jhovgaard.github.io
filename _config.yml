@@ -1,3 +1,5 @@
 paginate: 5
 permalink: /:title/
 markdown: kramdown 
+gems:
+  - jekyll-redirect-from

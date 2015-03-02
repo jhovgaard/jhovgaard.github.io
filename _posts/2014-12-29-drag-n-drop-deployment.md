@@ -4,6 +4,7 @@ title: "Drag n' drop deployment on IIS"
 author: "Jonas Hovgaard"
 comments: true
 description: "Imaging if you could just drag n' drop a folder from your desktop machine in to IIS. Servant.io enables that."
+redirect_to: http://blog.servant.io/drag-n-drop-deployment/
 ---
 Hi guys!
 
