@@ -60,5 +60,5 @@ Now two things can happen. You'll see a scary YSOD page telling you that the pag
 
 **Please, if you enjoyed reading this post - share it!**
 
- [1]: http://jhovgaard.net/from-aspnet-mvc-to-nancy-part-2/
+ [1]: http://www.jhovgaard.com/from-aspnet-mvc-to-nancy-part-2/
  [2]: /postfiles/nancytest-part1.zip
