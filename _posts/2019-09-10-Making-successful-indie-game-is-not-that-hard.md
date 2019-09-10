@@ -60,4 +60,4 @@ Use the time to:
 In my opinion, these are the 6 most common reasons why game developers fail to create a successful indie game. Obviously every release and game is unique. No matter how correct your "execution" is, you'll never get any success unless you have a game that's worth playing.
 
 ## Want my advice?
-I remember when I was about to release Startup Company. I had thousands of questions and no one that could answer them. So if you're stuck with something, you can always reach me on Twitter or Discord and I'll try to answer as well as I can :-)
+I remember when I was about to release Startup Company. I had thousands of questions and no one that could answer them. So if you're stuck with something, you can always reach me on [Twitter](https://twitter.com/jhovgaard) or [Discord](https://discord.gg/hovgaardgames) and I'll try to answer as well as I can :-)
