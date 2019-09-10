@@ -26,7 +26,7 @@ With this in mind, try to understand what you're trying to achieve. This isn't y
 A pixel-art platform with a twist? Another first-person zombie survival? Don't do it. I'm not saying there's no room for more games in popular genres. What I'm saying is that you should target niche genres as a beginner that have less competition and therefore higher chances of success.
 
 ## Your logo sucks and your assets are awful
-This one is incredibly important! Your logo, trailer, assets and UI should be made by a person who has experience and talent in these areas. If that's not you, it's time to find a contractor. Jump over to /r/gamedevclassifieds or similar and find someone with experience in the type of work you need.
+This one is incredibly important! Your logo, trailer, assets and UI should be made by a person who has experience and talent in these areas. If that's not you, it's time to find a contractor. Jump over to [/r/gameDevClassifieds](https://www.reddit.com/r/gameDevClassifieds/) or similar and find someone with experience in the type of work you need.
 
 If you don't think your game looks exciting, no one else will. 
 
