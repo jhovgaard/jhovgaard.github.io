@@ -8,7 +8,7 @@ description: "In this post I look at my own game and how localization have affec
 The short answer is: **yes**. A more interesting question is: how much more?
 Two years ago I released my game "Startup Company" on Steam Early Access. At the time I already had a gut feeling that localization was important. At release the game supported the following languages: English, French, German, Spanish, Portuguese (BR), Simplified Chinese, Russian and Turkish.
 
-# Who bought the game?
+## Who bought the game?
 Startup Company sold 50.000 copies within the first month. Let's see where these customers came from:
 
 |Country  | Percentage of sales |
@@ -25,7 +25,7 @@ It's no surprise that USA comes out at top. However what is surprising is that i
 
 It's impossible to determine if these customers would still buy my game if it wasn't translated. Instead we can notice one thing: Korean is no where to be found in my top 10...
 
-# Introducing Korean translations
+## Introducing Korean translations
 In June 2018 I introduced Korean translations to Startup Company. First, let's take a look at the top 10 from the period March 1, 2018  to May 31, 2018 (3 months prior to the Korean release):
 
 | Country | Percentage of sales |
@@ -61,7 +61,7 @@ Notice Korea suddenly came up?
 
 At the time I expected it to die out shortly after. It just never happened. It only stabilized. Looking at the last 3 months Korean has been my 4th best selling country, taking up 6% of all sales.
 
-# Steam's language filter
+## Steam's language filter
 So how did all of these Korean speaking people suddenly find my game? I didn't do any advertising. All I did was clicking the Korean checkbox on my Steam Store Page. 
 One guess could be that Steam's algorithms greatly reward localized games to their respective audiences.
 Another possibility is that it happened "organic" due to Steam's language filter. Let me explain:
@@ -76,7 +76,7 @@ If you're not a English speaker, you not only prefer games in your own language,
 
 I believe that my game used to be excluded to most Korean players because of my lack of localization. Once I added the language, I suddenly came up on the Discovery Queue (and the rest of Steam) causing my Korean sales to boom.
 
-# Conclusion
+## Conclusion
 I don't believe there's *ever ever ever ever* a reason not to translate your game into as many languages as possible, as soon as possible.
 It's common practice to release supporting English only and then adding localization later on. I think this is a huge mistake. I believe you're wasting a ton of exposure and potential wishlists. 
 You might not have the money to pay for professional translations, but the least you can do it let your community translate your game using free platforms like [Localizor.io](https://www.localizor.io) or similar.
