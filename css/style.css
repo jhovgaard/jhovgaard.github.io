@@ -139,6 +139,27 @@ code { overflow-x: scroll; }
 	text-decoration: none;
 }
 
+#container table {
+}
+
+
+#container thead {
+	border-bottom: 2px solid #ececec;
+}
+
+#container tr {
+	border-bottom: 1px solid #ececec;
+}
+
+#container th {
+	text-align: left;
+	    padding: 5px;
+}
+
+#container td {
+	    padding: 5px;
+}
+
 #servant-ad {
   background-color: #eaedee;
   padding: 10px;
