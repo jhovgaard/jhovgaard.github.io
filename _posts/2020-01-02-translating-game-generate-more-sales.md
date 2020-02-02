@@ -9,7 +9,8 @@ The short answer is **yes** and I'd like to demonstrate that to you through some
 Two years ago I released my game "Startup Company" on Steam Early Access. Since release, I have always felt like localization is an important aspect of any game. Upon release, the game supported the following languages: English, French, German, Spanish, Portuguese (BR), Simplified Chinese, Russian and Turkish.
 
 <div class="alert alert-success">
- <b>Disclaimer:</b> We, at Hovgaard Games, are current working on a free community translation platform called [Localizor](https://www.localizor.io). 
+ <b>Disclaimer:</b> We, at Hovgaard Games, are current working on a free community translation platform called
+ <a href="https://www.localizor.io" target="_blank">Localizor</a>
 </div>
 
 ## Who bought the game?
